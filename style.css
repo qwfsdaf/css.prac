@@ -1,0 +1,569 @@
+* {
+    box-sizing: border-box;
+    border: 0 solid #e2e8f0;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.cards {
+    font-family: 'Gothic A1', sans-serif;
+    font-family: 'Hahmlet', serif;
+    font-family: 'Sunflower', sans-serif;
+    background-color: #F3E8FF;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 33.33333;
+    height: 90vh;
+    display: flex;
+    margin: auto;
+    width: 22rem;
+    background-color: white;
+}
+
+.card__weather--title {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.card__weather--title--text {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 2.5rem;
+    width: 100%;
+    margin-bottom: 1.25rem;
+}
+
+.card__weather--Casius {
+    padding: 1.5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+
+.card__weather--Dlacria {
+    padding: 1.5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: orange;
+}
+.card__weather--newyork {
+    padding: 1.5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    margin-bottom: 1rem;    
+    background-color: #0fac56;
+}
+.card__weather--zomato {
+    padding: 1.5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 6vw;
+    display: flex;
+    margin-bottom: 1rem;
+    background-color: rgb(216, 97, 97);
+    color: white;
+}
+
+.card__weather--icon--temper--circle-black {
+    border-color: black;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 9999px;
+    width: 0.75rem;
+    height: 0.75rem;
+    left: 2.75rem;
+    bottom: 1rem;
+    position: absolute;
+}
+
+.card__weather--icon--temper {
+    position: relative;
+}
+
+.card__weather--icon--temper--circle-white {
+    border-color: white;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 9999px;
+    width: 0.75rem;
+    height: 0.75rem;
+    left: 2.75rem;
+    bottom: 1rem;
+    position: absolute;
+}
+.card__weather--font--subtext {
+    font-weight: 300;
+    font-size: 1rem; /* 12px */
+    line-height: 1rem; /* 16px */
+    margin: 0;
+}
+.card__weather--font--text {
+    font-size: 1.5rem; /* 18px */
+    line-height: 1.75rem; /* 28px */
+    margin: 0;
+    font-weight: bold;
+}
+
+
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.card__weather--icon {
+    max-width: 6vw;
+    fill: none;
+    stroke: currentcolor;
+    stroke-width: 1.5;
+    display: flex;
+    width: auto;
+    line-height: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.card--icon {
+    font-size: 2rem;
+    width: 90%;
+}
+
+.card__weather--icon--temper--text {
+    font-size: 2rem;
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+    width: 3vw 3vw 5vw;
+
+}
+
+
+i.fa-cloud {
+    font-size: 40px;
+    width: 3vw;
+    padding-right: 1rem;
+}
+
+i.fa-sun {
+    font-size: 40px;
+    width: 3vw;
+    padding-right: 1rem;
+}
+
+
+.card__simplytag--header {
+    justify-content: flex-start;
+    width: 100%;
+    display: flex;
+}
+
+.card__simplytag--header--icon {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.card__simplytag--title {
+    margin-bottom: 2rem;
+}
+
+.card__simplytag--title--tag {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+.card__simplytag--title--text {
+    font-weight: 800;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+}
+
+.card__download {
+    margin-bottom: 1.75rem;
+    grid-column-gap: 0.5rem;
+    display:grid;
+    grid-template-columns: 2fr 2fr;
+    grid-row-gap: 0.5rem;
+}
+
+.card__download--first {
+    background-color: rgb(253, 224, 71);
+    border-width: 3px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 8.5rem;
+    height: 11rem;
+    border-color: black;
+    border-style: solid;
+    color: white;
+}
+
+.card__download--second {
+    background-color: rgb(134 239 172);
+    border-width: 3px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 8.5rem;
+    height: 11rem;
+    border-color: black;
+    border-style: solid;
+    color: white;
+}
+
+.card__download--third {
+    background-color: rgb(249 168 212);
+    border-width: 3px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 8.5rem;
+    height: 11rem;
+    border-color: black;
+    border-style: solid;
+    color: white;
+}
+
+.card__download--fourth {
+    background-color: rgb(252 165 165);
+    border-width: 3px;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    width: 8.5rem;
+    height: 11rem;
+    border-color: black;
+    border-style: solid;
+    color: white;
+}
+
+i.fa-cloud-download-alt {
+    font-size: 80px;
+}
+
+.card__footer {
+    color: white;
+    font-weight: 600;
+    background-color: rgb(37 99 235);
+    border-radius: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    width: 17.5rem;
+    height: 3rem;
+    display: flex;
+    font-size: 1.25rem;
+}
+
+.card__message {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: rgb(250 204 21);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+    display: flex;
+    margin: auto;
+
+}
+.card__message--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+}
+
+.card__message--header--icon {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    border-radius: 9999px;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    margin-top: 1.5rem;
+}
+
+.card__message--header--title {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.card__meesage--header--bin {
+    width: 2rem;
+    height: 2rem;
+}
+
+.card__message--search {
+    padding: 0.5rem;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-bottom-width: 4px;
+    border-width: 3px;
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.card__message--search--text {
+    font-weight: 600;
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    margin: 0;
+}
+
+i.fa-search {
+    font-size: 25px;
+}
+.card__message--searchlist {
+    padding: 0.5rem;
+    background-color: white;
+    border-color: black;
+    border-style: solid;
+    border-width: 3px 3px 6px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.card__message--searchlist--list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__message--searchlist--list--circle--first {
+    background-color: white;
+    border-radius: 9999px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.card__message--searchlist--list--circle--second {
+    background-color: rgb(59 130 246);
+    border-radius: 9999px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.card__message--searchlist--list--circle--third {
+    background-color: rgb(37 99 235);
+    border-radius: 9999px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.card__message--searchlist--list--circle--fourth {
+    background-color: rgb(147 197 253);
+    border-radius: 9999px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.card__message--searchlist--list--circle--fifth {
+    background-color: black;
+    border-radius: 9999px;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    width: 4rem;
+    height: 4rem;
+    margin-right: 0.5rem;
+}
+
+.card__message--searchlist--list--title--text {
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0;
+}
+
+.card__message--searchlist--list--title--subtext {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    margin: 0;
+}
+
+.card__message--select {
+    font-weight: 600;
+    font-size: 1.125rem;
+    line-height: 1.475rem;
+    text-align: center;
+    background-color: rgb(250 204 21);
+    border-color: rgb(0 0 0);
+    border-style: solid;
+    border-width: 3px 3px 5px;
+    border-radius: 0.75rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 2.5rem;
+}
+
+.card__message--selected {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.35rem;
+    text-align: center;
+    background-color: black;
+    border-color: black;
+    border-style: solid;
+    border-bottom-width: 4px;
+    border-width: 2px;
+    border-radius: 0.75rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    width: 25%;
+    height: 2.5rem;
+    color: white;
+}
+
+.card__message--searchlist--list--title--seinte {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin: 0;
+}
